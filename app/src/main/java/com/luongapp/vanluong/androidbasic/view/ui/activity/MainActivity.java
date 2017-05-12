@@ -1,7 +1,9 @@
-package com.luongapp.vanluong.androidbasic;
+package com.luongapp.vanluong.androidbasic.view.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.luongapp.vanluong.androidbasic.R;
 
 public class MainActivity extends AppCompatActivity {
 
