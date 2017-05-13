@@ -5,65 +5,77 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:id="@+id/edit"
         android:hint="NHẬP GÌ ĐI NÀO"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_show_edit"
         android:text="hiển thị text"
         android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/txt_show_edit"
         android:layout_gravity="center"
-        android:layout_margin="10dp"/>
+       />
 
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"/>
+        android:id="@+id/check_android"
+        android:text="Android"/>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nữ"/>
+        android:id="@+id/check_ios"
+        android:text="IOS"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_show_checkbox"
         android:text="show"/>
 
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:id="@+id/btn_toggle"
         android:textOn="Bật"
         android:textOff="Tắt"/>
 
     <TextView
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Giới tính bạn là gì"
         android:textSize="20dp"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:id="@+id/radio_group"
+        android:layout_height="wrap_content">
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/radio_nam"
         android:text="Nam"/>
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/radio_nu"
         android:text="Nữ"/>
+    </RadioGroup>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:id="@+id/btn_show_radio"
         android:text="Show"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_run_service"
         android:text="Chạy service đi nào"/>
 
 </LinearLayout>
