@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bai11</string>
+    <string name="title_activity_receive">ReceiveActivity</string>
+    <string name="Click">Nhan vao</string>
+    <string name="LongClick">Nhan giu</string>
+    <string name="Touch">Cham</string>
+    <string name="edtHint">Nhap ten </string>
+
+</resources>
