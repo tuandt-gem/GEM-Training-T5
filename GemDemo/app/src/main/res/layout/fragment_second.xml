@@ -1,0 +1,118 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gem.vn.gemdemo.fragments.SecondFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_UI"
+            android:text="Android - UI"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_UI"
+            android:layout_below="@id/tv_UI"
+            android:minWidth="200dp"
+            android:hint="Text something in here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <AutoCompleteTextView
+            android:id="@+id/acv_UI"
+            android:layout_below="@id/et_UI"
+            android:minWidth="200dp"
+            android:hint="Text again "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bt_UI"
+            android:text="Example Buton"
+            android:textAllCaps="false"
+            android:textColor="#E0E0E0"
+            android:background="#689F38"
+            android:layout_below="@id/acv_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"/>
+
+        <ImageButton
+            android:id="@+id/ib_UI"
+            android:layout_toEndOf="@id/bt_UI"
+            android:layout_below="@id/acv_UI"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ToggleButton
+            android:id="@+id/tb_UI"
+            android:layout_toEndOf="@id/ib_UI"
+            android:layout_below="@id/acv_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cb_UI"
+            android:text="FA"
+            android:layout_below="@id/ib_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/rg_UI"
+            android:layout_below="@id/cb_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:text="Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:text="Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:text="Other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+        <ProgressBar
+            android:id="@+id/pb_UI"
+            android:layout_below="@id/rg_UI"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <Spinner
+            android:id="@+id/sp_UI"
+            android:layout_below="@id/pb_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Spinner>
+
+        <Button
+            android:id="@+id/bt_next_fragment"
+            android:layout_below="@id/sp_UI"
+            android:layout_centerHorizontal="true"
+            android:text="Next Fragment"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>
