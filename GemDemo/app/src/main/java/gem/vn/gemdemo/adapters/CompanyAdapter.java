@@ -14,6 +14,11 @@ import gem.vn.gemdemo.view.holders.CompanyViewHolder;
  */
 
 public class CompanyAdapter extends RecyclerView.Adapter<CompanyViewHolder> {
+    private OnItemAction onItemAction;
+
+    public CompanyAdapter(OnItemAction onItemAction) {
+        this.onItemAction = onItemAction;
+    }
 
     @Override
     public CompanyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -25,12 +30,16 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyViewHolder> {
 
     @Override
     public void onBindViewHolder(CompanyViewHolder holder, int position) {
-        holder.bind(Company.COMPANIES[position]);
+        holder.bind(position, Company.COMPANIES[position], onItemAction);
     }
 
     @Override
     public int getItemCount() {
         return Company.COMPANIES.length;
+    }
+
+    public interface OnItemAction {
+        void onItemClicked(int position, Company company);
     }
 
 }

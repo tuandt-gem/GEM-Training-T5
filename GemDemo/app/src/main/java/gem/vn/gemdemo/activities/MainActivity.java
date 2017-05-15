@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.FrameLayout;
 
 import org.greenrobot.eventbus.EventBus;
@@ -13,13 +12,16 @@ import org.greenrobot.eventbus.Subscribe;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import gem.vn.gemdemo.R;
+import gem.vn.gemdemo.adapters.CompanyAdapter;
 import gem.vn.gemdemo.events.BroadcastEvent;
 import gem.vn.gemdemo.events.OpenDetailFragmentEvent;
 import gem.vn.gemdemo.events.OpenFragmentEvent;
+import gem.vn.gemdemo.fragments.ContactFragment;
 import gem.vn.gemdemo.fragments.DetailFragment;
 import gem.vn.gemdemo.fragments.FirstFragment;
+import gem.vn.gemdemo.models.Company;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CompanyAdapter.OnItemAction {
 
     private static final String TAG = MainActivity.class.toString();
     @BindView(R.id.fl_container)
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         EventBus.getDefault().register(this);
     }
 
-    private void changeFragment(Fragment fragment, boolean addToBackStack) {
+    public void changeFragment(Fragment fragment, boolean addToBackStack) {
         if (addToBackStack) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fl_container, fragment)
@@ -63,11 +65,18 @@ public class MainActivity extends AppCompatActivity {
         sendBroadcast(intent);
     }
 
-    @Subscribe
-    public void onEvent(OpenDetailFragmentEvent openFragmentEvent) {
+    @Override
+    public void onItemClicked(int position, Company company) {
         DetailFragment detailFragment = new DetailFragment();
-        detailFragment.setCompany(openFragmentEvent.getCompany());
+        detailFragment.setCompany(company);
         changeFragment(detailFragment, true);
     }
+
+//    @Subscribe
+//    public void onOpenDetailFragmentEvent(OpenDetailFragmentEvent e) {
+//        DetailFragment detailFragment = new DetailFragment();
+//        detailFragment.setCompany(e.getCompany());
+//        changeFragment(detailFragment, true);
+//    }
 
 }

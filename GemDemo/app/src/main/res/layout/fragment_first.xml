@@ -29,6 +29,14 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/bt_content_provider"
+            android:text="Content Provider"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
             android:id="@+id/bt_broadcast"
             android:text="Broadcast Intent"
             android:textAllCaps="false"

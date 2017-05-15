@@ -13,6 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import gem.vn.gemdemo.R;
 import gem.vn.gemdemo.adapters.CompanyAdapter;
+import gem.vn.gemdemo.models.Company;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,7 +24,7 @@ public class ThirdFragment extends Fragment {
     RecyclerView rvCompany;
 
     CompanyAdapter companyAdapter;
-
+    private CompanyAdapter.OnItemAction onItemAction;
     public ThirdFragment() {
         // Required empty public constructor
     }
@@ -42,11 +43,14 @@ public class ThirdFragment extends Fragment {
     }
 
     private void setupUI() {
-        companyAdapter = new CompanyAdapter();
+        companyAdapter = new CompanyAdapter(onItemAction);
         rvCompany.setHasFixedSize(true);
         rvCompany.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 //        rvCompany.setLayoutManager(new GridLayoutManager(this, GRID_LAYOUT_COLUMN));
         rvCompany.setAdapter(companyAdapter);
     }
 
+    public void setOnItemAction(CompanyAdapter.OnItemAction onItemAction) {
+        this.onItemAction = onItemAction;
+    }
 }

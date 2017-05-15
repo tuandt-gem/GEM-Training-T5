@@ -13,6 +13,7 @@ import org.greenrobot.eventbus.EventBus;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import gem.vn.gemdemo.R;
+import gem.vn.gemdemo.adapters.CompanyAdapter;
 import gem.vn.gemdemo.events.OpenDetailFragmentEvent;
 import gem.vn.gemdemo.events.OpenFragmentEvent;
 import gem.vn.gemdemo.fragments.DetailFragment;
@@ -36,7 +37,7 @@ public class CompanyViewHolder extends RecyclerView.ViewHolder {
         ButterKnife.bind(this, itemView);
     }
 
-    public void bind(final Company company) {
+    public void bind(final int position, final Company company, final CompanyAdapter.OnItemAction onItemAction) {
         Picasso.with(this.itemView.getContext()).load(company.getLogoUrl()).into(ivCompany);
         Log.d(TAG, company.getLogoUrl());
         tvCompanyName.setText(company.getName());
@@ -49,7 +50,8 @@ public class CompanyViewHolder extends RecyclerView.ViewHolder {
 
                 e.setCompany(company);
 
-                EventBus.getDefault().post(e);
+                if (onItemAction != null)
+                    onItemAction.onItemClicked(position, company);
             }
         });
     }

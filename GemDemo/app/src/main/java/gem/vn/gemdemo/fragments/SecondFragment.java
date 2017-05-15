@@ -21,6 +21,7 @@ import org.greenrobot.eventbus.EventBus;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import gem.vn.gemdemo.R;
+import gem.vn.gemdemo.activities.MainActivity;
 import gem.vn.gemdemo.events.OpenFragmentEvent;
 
 /**
@@ -99,7 +100,12 @@ public class SecondFragment extends Fragment {
         btNextFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EventBus.getDefault().post(new OpenFragmentEvent(new ThirdFragment(), true));
+                MainActivity activity = (MainActivity) getActivity();
+
+                ThirdFragment fragment = new ThirdFragment();
+                fragment.setOnItemAction(activity);
+
+                activity.changeFragment(fragment, true);
             }
         });
     }
