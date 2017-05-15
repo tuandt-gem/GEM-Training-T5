@@ -2,10 +2,13 @@ package gem.vn.gemdemo.services;
 
 import android.app.Service;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
+
+import gem.vn.gemdemo.R;
 
 /**
  * Created by Lush on 5/14/2017.
@@ -13,6 +16,7 @@ import android.widget.Toast;
 
 public class MyService extends Service {
     private static final String TAG = MyService.class.toString();
+    private MediaPlayer mediaPlayer;
 
     @Nullable
     @Override
@@ -23,14 +27,16 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         // Let it continue running until it is stopped.
-        Log.d(TAG, "service is running");
-        Toast.makeText(this, "Service Started", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Song is playing by Service", Toast.LENGTH_SHORT).show();
+        mediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.song);
+        mediaPlayer.start();
         return START_NOT_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "Service Destroyed", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Song was paused", Toast.LENGTH_SHORT).show();
+        mediaPlayer.stop();
     }
 }
