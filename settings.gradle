@@ -1,0 +1,1 @@
+include ':contentproviders', ':fragment', ':service', ':broadcastreceivers', ':intentfilter'
