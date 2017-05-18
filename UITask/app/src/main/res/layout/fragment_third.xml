@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gem.vn.uitask.fragment.ThirdFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Grid View"
+            android:textSize="@dimen/title_size"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:background="@drawable/gradiant_background"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"/>
+
+        <GridView
+            android:id="@+id/gv_pets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:gravity="center">
+        </GridView>
+
+        <TextView
+            android:text="Recycler View"
+            android:textSize="@dimen/title_size"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="@drawable/gradiant_background"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_company"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <Button
+            android:id="@+id/bt_next_fragment"
+            android:text="Next Fragment"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="#000000"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

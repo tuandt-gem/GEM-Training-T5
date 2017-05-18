@@ -1,0 +1,105 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="gem.vn.uitask.fragment.FourthFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_UI"
+            android:text="Android - UI"
+            style="@style/CustomFontStyle"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/actv_UI"
+            android:layout_below="@id/tv_UI"
+            android:minWidth="200dp"
+            android:hint="Say hi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/ib_UI"
+            android:layout_below="@id/actv_UI"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ToggleButton
+            android:id="@+id/tb_UI"
+            android:layout_below="@id/ib_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/sp_UI"
+            android:layout_below="@id/tb_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Spinner>
+
+        <CheckBox
+            android:id="@+id/cb_UI"
+            android:text="FA"
+            android:layout_below="@id/sp_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/rg_UI"
+            android:layout_below="@id/cb_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:text="Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:text="Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rb_other"
+                android:text="Other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+        <ProgressBar
+            android:id="@+id/pb_UI"
+            android:layout_below="@id/rg_UI"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <gem.vn.uitask.models.TimeTextView
+            android:id="@+id/ttv_custom"
+            android:textSize="24sp"
+            android:layout_below="@id/pb_UI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:time="3605"/>
+
+        <Button
+            android:id="@+id/bt_next_fragment"
+            android:layout_below="@id/ttv_custom"
+            android:layout_centerHorizontal="true"
+            android:text="Next Fragment"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</FrameLayout>
