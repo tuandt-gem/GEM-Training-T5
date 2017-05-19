@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="th.quoctuan.androidbasic.Fragment1"
+    android:background="#58FAF4">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:hint="@string/enter_name_hint" />
+</FrameLayout>

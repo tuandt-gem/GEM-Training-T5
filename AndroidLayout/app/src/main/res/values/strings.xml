@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidLayout</string>
+    <string name="labelTop">Swipe me</string>
+    <string name="labelBelow">Current Layout in FrameLayout is </string>
+</resources>

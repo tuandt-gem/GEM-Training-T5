@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:text="Move to watch RecyclerView" />
+
+    <CheckBox
+        android:id="@+id/checkBox10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="10dp"
+        android:layout_y="51dp"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="286dp"
+        android:layout_y="52dp"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="49dp"
+        android:text="CheckBox" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="246dp"
+        android:layout_height="407dp"
+        android:layout_x="128dp"
+        android:layout_y="90dp"
+        android:background="#DF01D7"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="116dp"
+        android:layout_height="403dp"
+        android:layout_x="10dp"
+        android:layout_y="94dp"
+        android:background="#0000FF"
+        android:text="TextView" />
+</AbsoluteLayout>
