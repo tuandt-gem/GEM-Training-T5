@@ -1,27 +1,52 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#FFE082"
     android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:padding="16dp"
-        android:gravity="center_vertical|end"
-        android:text="0"
-        android:background="#ddd"
-        android:textSize="32sp"
-        android:id="@+id/display"
-        android:singleLine="true"
-        android:ellipsize="none"
-        android:maxLength="11"/>
+        android:id="@+id/layout_display"
+        android:orientation="vertical"
+        android:background="@drawable/text_shape"
+        android:layout_height="160dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="4dp"
+            android:textSize="32sp"
+            android:layout_gravity="top"
+            android:gravity="center_vertical|top"
+            android:textColor="#fff"
+            android:id="@+id/display"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:maxLength="11"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="0"
+            android:layout_marginTop="4dp"
+            android:textSize="32sp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical|end"
+            android:textColor="#fff"
+            android:id="@+id/display_result"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:maxLength="11"/>
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/vertical"
-        android:layout_below="@+id/display">
+        android:layout_below="@+id/layout_display">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -35,6 +60,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="7"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
+                android:layout_margin="@dimen/magin_btn"
                 android:onClick="numberButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button7" />
@@ -44,6 +72,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="8"
+                android:layout_margin="@dimen/magin_btn"
+
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
                 android:onClick="numberButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button8" />
@@ -53,6 +85,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="9"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:onClick="numberButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button9" />
@@ -62,6 +98,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="÷"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:onClick="operationButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/divide" />
@@ -79,7 +119,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="4"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
                 android:onClick="numberButton"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button4" />
 
@@ -88,6 +132,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="5"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:onClick="numberButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button5" />
@@ -97,6 +145,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="6"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:onClick="numberButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button6" />
@@ -106,6 +158,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="×"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:onClick="operationButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/multiply" />
@@ -123,7 +179,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="3"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
                 android:onClick="numberButton"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button3" />
 
@@ -132,7 +192,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="2"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
                 android:onClick="numberButton"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button2" />
 
@@ -141,7 +205,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="1"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
                 android:onClick="numberButton"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button1" />
 
@@ -150,6 +218,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="-"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:onClick="operationButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/subtract" />
@@ -167,6 +239,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="0"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:onClick="numberButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/button0" />
@@ -176,7 +252,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="."
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
                 android:onClick="numberButton"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:textSize="@dimen/text_size"
                 android:id="@+id/decimal" />
 
@@ -185,7 +265,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="="
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
                 android:onClick="equalButton"
+                android:layout_margin="@dimen/magin_btn"
+
                 android:textSize="@dimen/text_size"
                 android:id="@+id/equals" />
 
@@ -194,6 +278,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="+"
+                android:background="@drawable/button_bg"
+                android:textColor="#fff"
+                android:layout_margin="@dimen/magin_btn"
                 android:onClick="operationButton"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/add" />
