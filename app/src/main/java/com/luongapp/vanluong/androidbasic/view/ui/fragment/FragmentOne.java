@@ -44,18 +44,18 @@ public class FragmentOne extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView=inflater.inflate(R.layout.fragment_one_layout, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_one_layout, container, false);
 
-        edit= (EditText) rootView.findViewById(R.id.edit);
-        btn_show_edit= (Button) rootView.findViewById(R.id.btn_show_edit);
-        txt_show_edit= (TextView) rootView.findViewById(R.id.txt_show_edit);
-        check_android= (CheckBox) rootView.findViewById(R.id.check_android);
-        check_ios= (CheckBox) rootView.findViewById(R.id.check_ios);
-        btn_show_check= (Button) rootView.findViewById(R.id.btn_show_checkbox);
-        btn_toggle= (ToggleButton) rootView.findViewById(R.id.btn_toggle);
-        btn_show_radio= (Button) rootView.findViewById(R.id.btn_show_radio);
-        btn_run_service= (Button) rootView.findViewById(R.id.btn_run_service);
-        radioGroup= (RadioGroup) rootView.findViewById(R.id.radio_group);
+        edit = (EditText) rootView.findViewById(R.id.edit);
+        btn_show_edit = (Button) rootView.findViewById(R.id.btn_show_edit);
+        txt_show_edit = (TextView) rootView.findViewById(R.id.txt_show_edit);
+        check_android = (CheckBox) rootView.findViewById(R.id.check_android);
+        check_ios = (CheckBox) rootView.findViewById(R.id.check_ios);
+        btn_show_check = (Button) rootView.findViewById(R.id.btn_show_checkbox);
+        btn_toggle = (ToggleButton) rootView.findViewById(R.id.btn_toggle);
+        btn_show_radio = (Button) rootView.findViewById(R.id.btn_show_radio);
+        btn_run_service = (Button) rootView.findViewById(R.id.btn_run_service);
+        radioGroup = (RadioGroup) rootView.findViewById(R.id.radio_group);
 
         setBtn_show_edit();
         setBtn_run_rvice();
@@ -67,7 +67,7 @@ public class FragmentOne extends BaseFragment {
         return rootView;
     }
 
-    private void setBtn_show_edit(){
+    private void setBtn_show_edit() {
 
         btn_show_edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,43 +78,43 @@ public class FragmentOne extends BaseFragment {
 
     }
 
-    private void setBtn_show_check(){
+    private void setBtn_show_check() {
 
         btn_show_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String result="";
-                if (check_android.isChecked()){
-                    result=result+check_android.getText().toString()+" ";
+                String result = "";
+                if (check_android.isChecked()) {
+                    result = result + check_android.getText().toString() + " ";
                 }
 
 
-                if (check_ios.isChecked()){
-                    result=result+check_ios.getText().toString();
+                if (check_ios.isChecked()) {
+                    result = result + check_ios.getText().toString();
                 }
 
-                Toast.makeText(getActivity(),"I LIKE "+ result, Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "I LIKE " + result, Toast.LENGTH_LONG).show();
 
             }
         });
     }
 
-    private void setBtn_toggle(){
+    private void setBtn_toggle() {
         btn_toggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (btn_toggle.isChecked()){
-                    Toast.makeText(getActivity(),"baatj", Toast.LENGTH_LONG).show();
+                if (btn_toggle.isChecked()) {
+                    Toast.makeText(getActivity(), "baatj", Toast.LENGTH_LONG).show();
 
-                }else
-                    Toast.makeText(getActivity(),"tat", Toast.LENGTH_LONG).show();
+                } else
+                    Toast.makeText(getActivity(), "tat", Toast.LENGTH_LONG).show();
 
             }
         });
     }
 
-    private void setBtn_sh_radio(final View view){
+    private void setBtn_sh_radio(final View view) {
         btn_show_radio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,7 +130,7 @@ public class FragmentOne extends BaseFragment {
 
     }
 
-    private void setBtn_run_rvice(){
+    private void setBtn_run_rvice() {
         btn_run_service.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

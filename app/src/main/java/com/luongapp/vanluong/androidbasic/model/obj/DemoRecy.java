@@ -5,7 +5,7 @@ package com.luongapp.vanluong.androidbasic.model.obj;
  */
 
 public class DemoRecy {
-   private String name;
+    private String name;
     private int idImage;
 
     public DemoRecy(String name, int idImage) {

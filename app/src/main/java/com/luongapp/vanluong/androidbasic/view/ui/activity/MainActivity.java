@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar= (Toolbar) findViewById(R.id.toolbar);
-        tabLayout= (TabLayout) findViewById(R.id.tabs);
-        viewPager= (ViewPager) findViewById(R.id.viewpager);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
 
         setSupportActionBar(toolbar);
 
@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setupViewPager(){
-         ViewPagerAdapter pagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
+    private void setupViewPager() {
+        ViewPagerAdapter pagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        pagerAdapter.addFrag(new FragmentOne(), "DEMO 1" );
+        pagerAdapter.addFrag(new FragmentOne(), "DEMO 1");
         pagerAdapter.addFrag(new FragmentTwo(), "DEMO 2");
         pagerAdapter.addFrag(new FragmentFour(), "DEMO 3");
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setupTab(){
+    private void setupTab() {
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setSelectedTabIndicatorColor
                 (ContextCompat.getColor(this, R.color.colorAccent));

@@ -14,15 +14,15 @@ public class CheckConnectInternet extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        if (checkConnectInternet(context)){
+        if (checkConnectInternet(context)) {
             Toast.makeText(context, "connect internet", Toast.LENGTH_LONG).show();
-        }else
+        } else
             Toast.makeText(context, "disconnect internet", Toast.LENGTH_LONG).show();
 
 
     }
 
-    public boolean checkConnectInternet(Context context){
+    public boolean checkConnectInternet(Context context) {
 
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 

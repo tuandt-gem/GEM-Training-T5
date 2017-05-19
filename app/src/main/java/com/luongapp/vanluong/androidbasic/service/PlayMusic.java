@@ -12,7 +12,7 @@ import com.luongapp.vanluong.androidbasic.R;
  * Created by vanluong on 12/05/2017.
  */
 
-public class PlayMusic extends Service{
+public class PlayMusic extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class SecondActivity extends AppCompatActivity {
 
-    public static final int result_Ok=2;
+    public static final int result_Ok = 2;
     private Button btn_back;
     private ListView lv;
 
@@ -27,53 +27,52 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        btn_back= (Button) findViewById(R.id.btn_back);
-        lv= (ListView) findViewById(R.id.lv_contacts);
+        btn_back = (Button) findViewById(R.id.btn_back);
+        lv = (ListView) findViewById(R.id.lv_contacts);
 
         setBtn_back();
         showAllContacts();
     }
 
-    private void setBtn_back(){
+    private void setBtn_back() {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent returnIntent = new Intent();
-                returnIntent.putExtra("result","hello");
-                setResult(result_Ok,returnIntent);
+                returnIntent.putExtra("result", "hello");
+                setResult(result_Ok, returnIntent);
                 finish();
             }
         });
     }
 
-    public void showAllContacts()
-    {
-        Uri uri=Uri.parse("content://contacts/people");
+    public void showAllContacts() {
+        Uri uri = Uri.parse("content://contacts/people");
 
-        ArrayList<String> list=new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<String>();
 
-        CursorLoader loader=new
+        CursorLoader loader = new
                 CursorLoader(this, uri, null, null, null, null);
-        Cursor c1=loader.loadInBackground();
+        Cursor c1 = loader.loadInBackground();
         c1.moveToFirst();
-        while(c1.isAfterLast()==false){
-            String s="";
-            String idColumnName= ContactsContract.Contacts._ID;
+        while (c1.isAfterLast() == false) {
+            String s = "";
+            String idColumnName = ContactsContract.Contacts._ID;
 
-            int idIndex=c1.getColumnIndex(idColumnName);
-            s=c1.getString(idIndex)+" - ";
+            int idIndex = c1.getColumnIndex(idColumnName);
+            s = c1.getString(idIndex) + " - ";
 
-            String nameColumnName=ContactsContract.Contacts.DISPLAY_NAME;
+            String nameColumnName = ContactsContract.Contacts.DISPLAY_NAME;
 
-            int nameIndex=c1.getColumnIndex(nameColumnName);
+            int nameIndex = c1.getColumnIndex(nameColumnName);
 
-            s+=c1.getString(nameIndex);
+            s += c1.getString(nameIndex);
             c1.moveToNext();
             list.add(s);
         }
         c1.close();
 
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, list);
         lv.setAdapter(adapter);
     }

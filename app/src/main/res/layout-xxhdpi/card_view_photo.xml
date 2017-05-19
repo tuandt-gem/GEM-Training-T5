@@ -18,8 +18,7 @@
             android:layout_height="match_parent"
             android:cropToPadding="true"
             android:scaleType="centerCrop"
-            android:adjustViewBounds="true"
-            />
+            android:adjustViewBounds="true" />
 
         <TextView
             android:id="@+id/txt_time"

@@ -23,15 +23,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private List<DemoRecy> demoRecies;
     private Context context;
 
-    public RecyclerViewAdapter(List<DemoRecy> demoRecies, Context context){
-        this.demoRecies=demoRecies;
-        this.context=context;
+    public RecyclerViewAdapter(List<DemoRecy> demoRecies, Context context) {
+        this.demoRecies = demoRecies;
+        this.context = context;
     }
 
     @Override
     public DemoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View layoutView= LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_photo, null);
-        DemoViewHolder demoViewHolder=new DemoViewHolder(layoutView, context, demoRecies);
+        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_photo, null);
+        DemoViewHolder demoViewHolder = new DemoViewHolder(layoutView, context, demoRecies);
         return demoViewHolder;
     }
 
@@ -40,7 +40,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         Picasso.with(context).load(demoRecies.get(position).getIdImage())
                 .resize(200, 200)
                 .into(holder.imagePhoto);
-            holder.textTime.setText(demoRecies.get(position).getName());
+        holder.textTime.setText(demoRecies.get(position).getName());
     }
 
     @Override
@@ -55,8 +55,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public DemoViewHolder(View itemView, Context context, List<DemoRecy> demoRecies) {
             super(itemView);
 
-            imagePhoto= (ImageView) itemView.findViewById(R.id.image_photo);
-            textTime= (TextView) itemView.findViewById(R.id.txt_time);
+            imagePhoto = (ImageView) itemView.findViewById(R.id.image_photo);
+            textTime = (TextView) itemView.findViewById(R.id.txt_time);
 
         }
 
