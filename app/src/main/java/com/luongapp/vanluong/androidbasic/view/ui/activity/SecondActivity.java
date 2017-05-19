@@ -34,6 +34,8 @@ public class SecondActivity extends AppCompatActivity {
         showAllContacts();
     }
 
+
+
     private void setBtn_back() {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,8 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     public void showAllContacts() {
         Uri uri = Uri.parse("content://contacts/people");
