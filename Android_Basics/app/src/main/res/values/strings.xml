@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android_Basics</string>
+    <string name="chonchucnang">Chức năng bạn muốn</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_ngheNhac">Nghe Nhạc</string>
+    <string name="action_xemThoiTiet">Xem thời tiết</string>
+</resources>
