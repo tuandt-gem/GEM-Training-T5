@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/UserInterface.iml" filepath="$PROJECT_DIR$/UserInterface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uicontrols/uicontrols.iml" filepath="$PROJECT_DIR$/uicontrols/uicontrols.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uilayouts/uilayouts.iml" filepath="$PROJECT_DIR$/uilayouts/uilayouts.iml" />
+    </modules>
+  </component>
+</project>

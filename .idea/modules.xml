@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GEM-Training-T5.iml" filepath="$PROJECT_DIR$/GEM-Training-T5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/broadcastreceivers/broadcastreceivers.iml" filepath="$PROJECT_DIR$/broadcastreceivers/broadcastreceivers.iml" />
-      <module fileurl="file://$PROJECT_DIR$/contentproviders/contentproviders.iml" filepath="$PROJECT_DIR$/contentproviders/contentproviders.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fragment/fragment.iml" filepath="$PROJECT_DIR$/fragment/fragment.iml" />
-      <module fileurl="file://$PROJECT_DIR$/intentfilter/intentfilter.iml" filepath="$PROJECT_DIR$/intentfilter/intentfilter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GEM-Training-T5.iml" filepath="$PROJECT_DIR$/.idea/GEM-Training-T5.iml" />
     </modules>
   </component>
 </project>
