@@ -13,6 +13,7 @@ import com.luongapp.vanluong.androidbasic.R;
  */
 
 public class PlayMusic extends Service {
+    private  MediaPlayer mPlayer;
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -22,9 +23,16 @@ public class PlayMusic extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.wakeupalone);
+       mPlayer = MediaPlayer.create(this, R.raw.wakeupalone);
         mPlayer.start();
 
         return START_NOT_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mPlayer.stop();
+
     }
 }
