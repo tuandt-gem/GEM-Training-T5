@@ -13,7 +13,9 @@ import com.luongapp.vanluong.androidbasic.R;
  */
 
 public class PlayMusic extends Service {
+    
     private  MediaPlayer mPlayer;
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
