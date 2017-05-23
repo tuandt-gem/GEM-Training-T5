@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class SecondActivity extends AppCompatActivity {
 
     public static final int result_Ok = 2;
+
     private Button btn_back;
     private ListView lv;
 
@@ -37,6 +38,7 @@ public class SecondActivity extends AppCompatActivity {
 
 
     private void setBtn_back() {
+
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +51,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
 
-
+// read contact
     public void showAllContacts() {
         Uri uri = Uri.parse("content://contacts/people");
 

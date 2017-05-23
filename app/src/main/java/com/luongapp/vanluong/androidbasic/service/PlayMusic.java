@@ -25,7 +25,6 @@ public class PlayMusic extends Service {
         MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.wakeupalone);
         mPlayer.start();
 
-
         return START_NOT_STICKY;
     }
 }

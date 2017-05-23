@@ -29,10 +29,12 @@ public class FragmentFour extends BaseFragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         demoRecies = new ArrayList<>();
+
         DemoRecy demoRecy = new DemoRecy("demo1", R.drawable.hinh1);
         DemoRecy demoRecy1 = new DemoRecy("demo2", R.drawable.hinh2);
         DemoRecy demoRecy2 = new DemoRecy("demo3", R.drawable.hinh3);
         DemoRecy demoRecy3 = new DemoRecy("demo4", R.drawable.hinh4);
+
         demoRecies.add(demoRecy);
         demoRecies.add(demoRecy1);
         demoRecies.add(demoRecy2);
@@ -44,6 +46,7 @@ public class FragmentFour extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_four_layout, container, false);
+
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler);
 
         layoutManager = new GridLayoutManager(getActivity(), 2);

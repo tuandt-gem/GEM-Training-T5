@@ -25,16 +25,22 @@ import com.luongapp.vanluong.androidbasic.service.PlayMusic;
 public class FragmentOne extends BaseFragment {
 
     private EditText edit;
-    private Button btn_show_edit;
+
     private TextView txt_show_edit;
+
     private CheckBox check_android;
     private CheckBox check_ios;
-    private Button btn_show_check;
+
     private ToggleButton btn_toggle;
+
     private RadioButton radio;
+    private RadioGroup radioGroup;
+
+    private Button btn_show_check;
+    private Button btn_show_edit;
     private Button btn_show_radio;
     private Button btn_run_service;
-    private RadioGroup radioGroup;
+    private Button btn_stop_service;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,12 +62,14 @@ public class FragmentOne extends BaseFragment {
         btn_show_radio = (Button) rootView.findViewById(R.id.btn_show_radio);
         btn_run_service = (Button) rootView.findViewById(R.id.btn_run_service);
         radioGroup = (RadioGroup) rootView.findViewById(R.id.radio_group);
+        btn_stop_service= (Button) rootView.findViewById(R.id.btn_stop_service);
 
         setBtn_show_edit();
-        setBtn_run_rvice();
+        setBtn_run_service();
         setBtn_toggle();
         setBtn_sh_radio(rootView);
         setBtn_show_check();
+        setBtn_stop_service();
 
 
         return rootView;
@@ -130,12 +138,21 @@ public class FragmentOne extends BaseFragment {
 
     }
 
-    private void setBtn_run_rvice() {
+    private void setBtn_run_service() {
         btn_run_service.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().startService(new Intent(getActivity(), PlayMusic.class));
 
+            }
+        });
+    }
+
+    private void setBtn_stop_service(){
+        btn_stop_service.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().stopService(new Intent(getActivity(), PlayMusic.class));
             }
         });
     }

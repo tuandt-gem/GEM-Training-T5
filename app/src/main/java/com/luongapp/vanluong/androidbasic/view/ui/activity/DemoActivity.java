@@ -63,7 +63,7 @@ public class DemoActivity extends AppCompatActivity {
 
         viewPager.setAdapter(sliderViewPagerAdapter);
 
-       timer=new Timer();
+         timer=new Timer();
         timer.scheduleAtFixedRate(new SliderTimeTask(), 2000, 4000);
 
     }

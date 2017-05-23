@@ -80,10 +80,26 @@
         android:id="@+id/btn_show_radio"
         android:text="Show" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_run_service"
-        android:text="Chạy service đi nào" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_run_service"
+            android:text="Chạy service đi nào"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btn_stop_service"
+            android:text="Stop service"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
 </LinearLayout>
