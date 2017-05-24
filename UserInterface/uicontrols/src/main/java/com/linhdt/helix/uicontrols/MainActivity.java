@@ -9,12 +9,14 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.linhdt.helix.uicontrols.autocomplete.AutoCompleteActivity;
+import com.linhdt.helix.uicontrols.downloadbackground.DownloadActivity;
 import com.linhdt.helix.uicontrols.groupbutton.ButtonActivity;
+import com.linhdt.helix.uicontrols.image.ImageActivity;
 import com.linhdt.helix.uicontrols.pick.PickActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btn1, btn3, btn4;
+    private Button btn1, btn3, btn4, btnshowImage, btnDl;
     private ImageButton btn2;
 
     @Override
@@ -29,11 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn2 = (ImageButton) findViewById(R.id.btn_image);
         btn3 = (Button) findViewById(R.id.btn);
         btn4 = (Button) findViewById(R.id.btn_pick);
-
+        btnshowImage = (Button) findViewById(R.id.btn_showImage);
+        btnDl = (Button) findViewById(R.id.btn_dl);
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
         btn4.setOnClickListener(this);
+        btnshowImage.setOnClickListener(this);
+        btnDl.setOnClickListener(this);
     }
 
     @Override
@@ -55,7 +60,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, PickActivity.class);
                 startActivity(intent);
                 break;
-
+            case R.id.btn_showImage:
+                intent = new Intent(this, ImageActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_dl:
+                intent = new Intent(this, DownloadActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 }
